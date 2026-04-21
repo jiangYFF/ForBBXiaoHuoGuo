@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#f7cfd6" />
+    <title>给小火锅的暖暖口袋</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="intro-screen" id="intro-screen" aria-hidden="false">
+      <div class="intro-glow intro-glow-left"></div>
+      <div class="intro-glow intro-glow-right"></div>
+      <div class="intro-card">
+        <p class="intro-kicker">jiangjiang to xiaohuoguo</p>
+        <h2 class="intro-title">给小火锅</h2>
+        <p class="intro-copy">这是一封神秘的礼物~ (＾＿~)</p>
+        <button class="intro-button" id="intro-button" type="button">轻轻打开</button>
+      </div>
+    </div>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">jiangjiang presents</p>
+        <h1>给小火锅的暖暖口袋</h1>
+        <p class="hero-copy">
+          这是一个突然闯进你手机的小网站。是江江在这里轻轻提醒你：
+          你不是一个需要被修好的问题，你是一个可爱的小bb，在春天会很好的小bb~
+        </p>
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <img src="./assets/hotpot-charm.png" alt="小火锅的可爱挂件" />
+          </div>
+          <div class="sparkle sparkle-left">暖</div>
+          <div class="sparkle sparkle-right">抱</div>
+        </div>
+        <div class="hero-actions">
+          <button class="secondary-button" id="comfort-button" type="button">
+            戳一下试试嘛？
+          </button>
+        </div>
+        <div class="floating-area" id="floating-area" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <p class="panel-kicker">今天的体感</p>
+          <h2>小火锅心情温度计</h2>
+        </div>
+        <label class="mood-wrap" for="mood-range">
+          <span>从“有点累”滑到“慢慢暖起来”</span>
+          <input id="mood-range" type="range" min="1" max="5" step="1" value="3" />
+        </label>
+        <div class="mood-card" id="mood-card">
+          <p class="mood-level" id="mood-level">温度 3 / 5</p>
+          <p class="mood-text" id="mood-text">
+            今天就先不用逼自己发光，能稳稳地待着也很厉害。
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <p class="panel-kicker">江江留言机</p>
+          <h2>抽一张今日小纸条</h2>
+        </div>
+        <div class="note-actions">
+          <button class="secondary-button" id="note-button" type="button">
+            抽一句
+          </button>
+          <button class="secondary-button ghost-button" id="favorite-button" type="button">
+            收藏这一句
+          </button>
+        </div>
+        <article class="note-card" id="note-card">
+          <p class="note-tag">小纸条</p>
+          <p class="note-content" id="note-content">
+            每个人都会有自己的开心基线，但你也可以一点点把它找回来。
+          </p>
+        </article>
+        <div class="favorite-strip" id="favorite-strip">还没有收藏的小句子。</div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <p class="panel-kicker">轻轻放下</p>
+          <h2>把烦恼吹成小星星</h2>
+        </div>
+        <label class="worry-wrap" for="worry-input">
+          <span>写一句今天最让你内耗的话</span>
+          <textarea
+            id="worry-input"
+            rows="4"
+            placeholder="比如：呜呜呜 我是小废物"
+          ></textarea>
+        </label>
+        <button class="primary-button warm-button" id="release-button" type="button">
+          吹一吹，让它变轻一点
+        </button>
+        <div class="release-result" id="release-result">
+          这里会帮你把那句话换一种更温柔的说法。
+        </div>
+        <div class="star-field" id="star-field" aria-hidden="true"></div>
+      </section>
+
+      <section class="panel record-panel">
+        <div class="panel-header">
+          <p class="panel-kicker">暖暖留声机</p>
+          <h2>给小火锅的小唱片</h2>
+        </div>
+        <div class="record-stage" id="record-stage">
+          <div class="record-player">
+            <button
+              class="record-button"
+              id="record-toggle"
+              type="button"
+              aria-pressed="false"
+              aria-label="播放暖暖留声机"
+            >
+              <div class="record-disc" id="record-disc">
+                <div class="record-ring ring-one"></div>
+                <div class="record-ring ring-two"></div>
+                <div class="record-ring ring-three"></div>
+                <div class="record-cover">
+                  <img src="./assets/hotpot-avatar.jpg" alt="小火锅的头像" />
+                </div>
+                <div class="record-label"></div>
+              </div>
+              <div class="tonearm" id="tonearm">
+                <span class="tonearm-head"></span>
+              </div>
+            </button>
+            <div class="record-glow"></div>
+          </div>
+          <div class="record-stage-badges">
+            <div class="sparkle sparkle-record-left">唱</div>
+            <div class="sparkle sparkle-record-right">暖</div>
+          </div>
+        </div>
+        <div class="lyric-card" id="lyric-card">
+          <p class="lyric-kicker">暖暖留声机</p>
+          <p class="lyric-line lyric-line-active">向更远一点的地方去</p>
+          <p class="lyric-line">穿过云，也穿过今天的低气压</p>
+          <p class="lyric-line">把重重的壳先轻轻放下</p>
+          <p class="lyric-line">然后慢慢回到，小火锅自己的光里</p>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-button" id="record-toggle-copy" type="button">
+            播放这张小唱片
+          </button>
+        </div>
+      </section>
+
+      <section class="footer-card">
+        <p>给小火锅：</p>
+        <p>
+          春天会反复，情绪也会反复，可你一直都不是孤零零一个人。
+          江江在，暖暖也在。
+        </p>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
